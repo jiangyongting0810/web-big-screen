@@ -2,6 +2,7 @@
 
 .home {flex: 1;height: 100%;display: flex;flex-direction: column;
   background: #010310;
+  color: white;
   background: #001244;
   > header {
     height: px(89);
@@ -16,7 +17,7 @@
       "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
       grid-column-gap:px(28);
       grid-row-gap: px(28);
-      > section {
+      .bordered {
         border: 1px solid #0764bc;
         border-radius: 4px;
         position: relative;
@@ -54,6 +55,25 @@
     }
     > .section5 {
       grid-area: box5;
+    }
+    .管辖统计{
+      height: px(315);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2{
+        border: 1px solid #0a5299 ;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        font-size: px(22);
+        line-height: px(24);
+        padding: px(10) px(28);
+        text-shadow: 0 0 px(3) white;
+      }
+      .chart{
+        flex:1;
+        width:100%;
+      }
     }
   }
 }
