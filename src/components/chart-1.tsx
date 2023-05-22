@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-
-const px = (n:number) => n/2420 * (window as any).pageWidth
+import { px } from "../shared/px";
+import { baseEchartOptions } from '../shared/base-echart-options';
 
 
 export const Chart1 = () =>{
@@ -12,12 +12,7 @@ export const Chart1 = () =>{
     var myChart = echarts.init(divRef.current);
     // 绘制图表
     myChart.setOption({
-      textStyle:{
-        fontSize:px(12),
-        color:'#79839e'
-      },
-      title:{show:false},
-      legend:{show:false},
+      ...baseEchartOptions,
       xAxis: {
         data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
         axisTick:{show:false},
@@ -46,12 +41,6 @@ export const Chart1 = () =>{
         axisLabel: {
           fontSize: px(12)
         }
-      },
-      grid:{
-        x:px(40),
-        y:px(40),
-        x2:px(40),
-        y2:px(40)
       },
       series: [
         {
