@@ -8,6 +8,7 @@ import { Chart2 } from '../components/chart-2';
 const px = (n:number) => n/2420 * (window as any).pageWidth
 
 export const Home = () => {
+  const year = new Date().getFullYear()
 
   return (
     <div className='home'>
@@ -23,6 +24,9 @@ export const Home = () => {
         <section className='bordered section4'></section>
         <section className='bordered section5'></section>
       </main>
+      <footer>
+        可视化平台
+      </footer>
     </div>
   );
 };
