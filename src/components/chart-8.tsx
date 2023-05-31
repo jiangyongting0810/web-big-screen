@@ -29,7 +29,7 @@ export const Chart8 = () => {
           },
           labelLine: {show: false},
           itemStyle: {
-            borderColor: '#0F113A',
+            // borderColor: '#0F113A',
             borderWidth: px(4)
           },
           data: [

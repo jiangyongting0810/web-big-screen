@@ -66,7 +66,7 @@ export const Home = () => {
         </section>
       </main>
       <footer>
-        &copy; 饥人谷 2020-{year}
+        &copy; 兰州公安 2022-{year}
       </footer>
     </div>
   );

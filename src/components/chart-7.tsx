@@ -21,7 +21,7 @@ export const Chart7 = () => {
             radius: ['75%', '90%'],
             avoidLabelOverlap: false,
             itemStyle: {
-              borderColor: '#0F113A',
+              // borderColor: '#0F113A',
               borderWidth: px(4)
             },
             label: {
@@ -57,7 +57,7 @@ export const Chart7 = () => {
       </div>
       <div className='legend'>
         <span className='male' />男
-        <span className='famale' />女
+        <span className='famale'id='legendFamale' />女
       </div>
     </div>
   );
