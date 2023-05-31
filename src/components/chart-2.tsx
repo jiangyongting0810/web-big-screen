@@ -5,6 +5,9 @@ import {createEchartsOptions} from '../shared/create-echarts-options';
 export const Chart2 = () => {
   const divRef = useRef(null)
   const myChart = useRef(null)
+  const mathData = ()=>{
+    return Math.random() * 10
+  } 
   const data = [
     {name:'城关区公安局',2011:2,2012:3},
     {name:'七里河区公安局',2011:2,2012:3},
@@ -19,18 +22,18 @@ export const Chart2 = () => {
   useEffect(()=>{
     setInterval(()=>{
       const newData = [
-        {name:'城关区公安局',2011:2,2012:5},
-        {name:'七里河区公安局',2011:2,2012:3},
-        {name:'西固区公安局',2011:2,2012:3},
-        {name:'安宁区公安局',2011:2,2012:3},
-        {name:'红古区公安局',2011:2,2012:3},
-        {name:'永登县公安局',2011:2,2012:3},
-        {name:'皋兰县公安局',2011:2,2012:3},
-        {name:'榆中县公安局',2011:2,2012:3},
-        {name:'新区公安局',2011:2,2012:3},
+        {name:'城关区公安局',2011:mathData(),2012:mathData()},
+        {name:'七里河区公安局',2011:mathData(),2012:mathData()},
+        {name:'西固区公安局',2011:mathData(),2012:mathData()},
+        {name:'安宁区公安局',2011:mathData(),2012:mathData()},
+        {name:'红古区公安局',2011:mathData(),2012:mathData()},
+        {name:'永登县公安局',2011:mathData(),2012:mathData()},
+        {name:'皋兰县公安局',2011:mathData(),2012:mathData()},
+        {name:'榆中县公安局',2011:mathData(),2012:mathData()},
+        {name:'新区公安局',2011:mathData(),2012:mathData()},
       ]
       x(newData)
-    },3000)
+    },4000)
   },[])
   const x = (data) =>{
     myChart.current.setOption(createEchartsOptions({
