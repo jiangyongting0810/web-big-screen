@@ -15,8 +15,21 @@ import {Chart11} from '../components/chart-11';
 import {Chart12} from '../components/chart-12';
 import {Chart13} from '../components/chart-13';
 import {Chart14} from '../components/chart-14';
+import { Link, Router } from 'react-router-dom';
 
 export const Home = () => {
+  //全屏代码
+  const handleFullscreen = () => {
+    document.documentElement.requestFullscreen()
+      .then(() => {
+        window.location.reload()
+        console.log('进入全屏模式');
+      })
+      .catch(err => {
+        console.error('无法进入全屏模式', err);
+      });
+  };
+
   const year = new Date().getFullYear();
   return (
     <div className="home">
@@ -67,6 +80,7 @@ export const Home = () => {
       </main>
       <footer>
         &copy; 兰州公安 2022-{year}
+        {/* <button onClick={handleFullscreen}>全屏</button> */}
       </footer>
     </div>
   );

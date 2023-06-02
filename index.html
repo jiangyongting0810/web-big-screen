@@ -7,13 +7,15 @@
   <title>大屏可视化项目</title>
 </head>
 <body>
-<div id="root"></div>
+<div id="root">
+  
+</div>
 <script>
-   const clientWidth = document.documentElement.clientWidth
+    const clientWidth = document.documentElement.clientWidth
     const clientHeight = document.documentElement.clientHeight
     window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth
     const pageHeight = pageWidth / (16 / 9)
-  const string = `
+    const string = `
   <style>
     html{
       font-size:${pageWidth / 100}px
@@ -21,6 +23,8 @@
   </style>
   `
   document.write(string)
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    fullscreenBtn.addEventListener('click', enterFullscreen);
 </script>
 <script>
   const root = document.querySelector("#root")
