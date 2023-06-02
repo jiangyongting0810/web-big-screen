@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.scss';
 import headerBg from '../images/header.png';
 import {Chart1} from '../components/chart-1';
@@ -15,9 +15,14 @@ import {Chart11} from '../components/chart-11';
 import {Chart12} from '../components/chart-12';
 import {Chart13} from '../components/chart-13';
 import {Chart14} from '../components/chart-14';
-import { Link, Router } from 'react-router-dom';
+import { openNotification } from '../shared/openNotification';
+
+
 
 export const Home = () => {
+  useEffect(() => {
+    openNotification(); // 在组件挂载后自动触发渲染
+  }, []);
   //全屏代码
   const handleFullscreen = () => {
     document.documentElement.requestFullscreen()
