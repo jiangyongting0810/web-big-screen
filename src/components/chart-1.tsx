@@ -14,7 +14,7 @@ export const Chart1 = () =>{
     myChart.setOption({
       ...baseEchartOptions,
       xAxis: {
-        data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
+        data: ['城关区', '七里河区', '西固区', '安宁区', '兰州新区', '红古区', '永登县', '皋兰县', '榆中县'],
         axisTick:{show:false},
         axisLine:{
           lineStyle:{color:"#083B70"}
@@ -46,7 +46,7 @@ export const Chart1 = () =>{
         {
           name: '销量',
           type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
+          data: [5, 20, 36, 10, 10, 20, 5, 20, 32]
         }
       ]
     })
